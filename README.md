@@ -63,5 +63,3 @@ Se tendrá en cuenta cualquier mejora que se considere añadir
 Esperamos que disfrutes realizando esta prueba tanto como nosotros al diseñarla. ¡Ánimo y suerte!
 
 * * *
-
-Este es solo un ejemplo y puedes ajustarlo según las necesidades específicas de la prueba o las instrucciones adicionales que desees incluir.
