@@ -61,5 +61,3 @@ Se tendrá en cuenta cualquier mejora que se considere añadir
 -------------
 
 Esperamos que disfrutes realizando esta prueba tanto como nosotros al diseñarla. ¡Ánimo y suerte!
-
-* * *
