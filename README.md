@@ -52,10 +52,25 @@ Instalación
 
 *   Si estás utilizando Flask para el endpoint de la API, debes ejecutar el archivo `app.py` y mantenerlo ejecutándose mientras desees que la ruta `/guardar-clima` esté operativa.
 
+
+Extra
+-----------
+1. Crea un nuevo endpoint que reciba la latitud y longitud y te devuelva la media de los últimos 5 días de los valores que consideres relevantes (Temperatura, humedad, viento, ...) A parte de las condiciones máximas y mínimas.
+(Para recibir datos de los últimos 5 días usa `http://api.openweathermap.org/data/2.5/forecast?lat=40.4&lon=-3.7&appid=fe18e4ee1578782f0e81d5783229a1fb&units=metric&lang=es`)
+
+2. Usa alguna libreria para transformar las coordenadas en localidad y devuélvela en la respuesta.
+
+3. Mediante los datos climatológicos de los últimos 5 días, haz una predicción del siguiente dato climatológico, usando el modelo predictivo que quieras, y devuelvelo en la llamada (dato climatológico y probabilidad).
+
 A valorar
 -----------
 
 Se tendrá en cuenta cualquier mejora que se considere añadir
+
+Aclaraciones
+-----------
+
+Este código es un punto de partida, puedes instalar las librerías que consideres y modificar, borrar o añadir todos los archivos que creas oportunos.
 
 ¡Mucho éxito!
 -------------
