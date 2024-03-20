@@ -2,18 +2,23 @@
 // Conexión a la base de datos
 $config = parse_ini_file('config.ini');
 
-$host = $config['host'];
-$dbname = $config['db_name'];
-$password = $config['password'];
-$user = $config['username'];
+$host = $config['loza'];
+$dbname = $config['Loza'];
+$password = $config['arsema521'];
+$user = $config['Loza'];
 
 //Conectate a la db!
-
+try {
+$pdo = new PDO("mysql:host=$host;dbname=$Loza", $user, $arsema521);
 
 
 //Recibimos los datos de clima como array de objetos
-
 $datosClima = [];
+} catch (PDOException $e) {
+// Handle database connection error
+echo "Error: " . $e->getMessage();
+die();
+}
 
 
 ?>
@@ -84,7 +89,12 @@ $datosClima = [];
 		var marker = L.marker([dato.lat, dato.lon]).addTo(mymap);
 		
 		//Añañdimos el html al popup con marker.bindPopup("<b>Hola!</b>")
-		
+		<?php foreach ($points as $point): ?>
+            // Crear marcador para cada punto existente
+            L.marker([<?= $point['lat'] ?>, <?= $point['lon'] ?>])
+                .addTo(mymap)
+                .bindPopup("<b><?= $point['name'] ?></b><br><?= $point['description'] ?>");
+        <?php endforeach; ?>
 
 
 	});
